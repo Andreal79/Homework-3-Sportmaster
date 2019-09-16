@@ -1,18 +1,15 @@
-import java.util.Scanner; // вызываем инструменты ввода с клавиатуры (эту вещь нашел нашел в интернете и применил в задаче)
+import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-        Scanner vvod = new Scanner(System.in);  //создаём инструмент пользовательского ввода с клавиатуры
-        int purchaseAmount = 150_001; // создаем переменную - сумма всех покупок
-        int amountPerPurchase; // объявляем переменную - сумма одной покупки
-        int bonuses; // объявляем переменную  - начисленные бонусы
+        Scanner input = new Scanner(System.in);
+        int purchaseAmount = 150_001;
+        int amountPerPurchase;
+        int bonuses;
         int deliteli = 1_000;
         int border = 15_000;
-        System.out.print("Введите сумму Вашей покупки в рублях: ");  //выводим на консоль сообщение о вводе
-        amountPerPurchase = vvod.nextInt();  //вводим значение в созданную переменную
-        System.out.println("Сумма Вашей покупки: " + amountPerPurchase + " рублей"); //выводим отформатированное сообщение
-        // содержащее значение введённой переменной
-
-// далее рассчитываем сумму начсиленных бонусов
+        System.out.print("Введите сумму Вашей покупки в рублях: ");
+        amountPerPurchase = input.nextInt();
+        System.out.println("Сумма Вашей покупки: " + amountPerPurchase + " рублей");
 
         if (purchaseAmount <= border) {
             bonuses = (amountPerPurchase / deliteli) * 50;
